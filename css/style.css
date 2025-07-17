@@ -1,3 +1,18 @@
+html {
+  font-size: 59%; /* Esto hace que 1rem = 10px */
+}
+:root {
+    --social-bg-color: #8a8a8a;
+    --social-bg-color-hover: #d8d8d865;
+    --gradient-left: #00094d;
+    --gradient-right: #011082;
+    --header-hover: #ffb163;
+    --header-text: rgba(232, 232, 232, 0.85);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+/*animaciones*/
 @keyframes slide-right {
   from {
     opacity: 0;
@@ -19,17 +34,40 @@
   100% {transform: scale3d(1,1,1);}
 }
 
+@keyframes slide-top {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-48px);
+  }
+}
+
+@keyframes scaleLine {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+  }
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+
+
+
 
 header{
     animation: slide-right 0.8s ease-in both;
 }
 .my-gradient{
-    background: linear-gradient(to right, #00094d, #011082);
+    background: linear-gradient(to right, var(--gradient-left), var(--gradient-right));
 }
 
 .brand-img {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
@@ -40,7 +78,7 @@ header{
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--header-text);
 }
 
 .navbar-nav .nav-link {
@@ -54,6 +92,93 @@ header{
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:hover {
-  color: #ffb163;
+  color: var(--header-hover);
   animation: jello-vertical 0.9s linear both;
+}
+
+
+/*main*/
+
+#mainSection{
+  position: relative;
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+}
+.intro{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90rem;
+  width: 90%;
+}
+h1{
+  font-size: 54px;
+  position: relative;
+}
+h1::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1rem);
+  height: 5px;
+  width: 35%;
+  background: var(--gradient-left);
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  border-radius: 5px;
+  animation: scaleLine 1s ease-out forwards;
+}
+.brand-img2 {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(0, 0, 0);
+}
+.pText{
+  font-size: 18px;
+}
+.text{
+  letter-spacing: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.textDesc{
+  margin: 3rem auto 0 auto;
+  max-width: 80rem;
+}
+
+.btnMain {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.btnMain a {
+  font-size: 2rem; /* Aumenta el tamaño del texto */
+  padding: 1.5rem 7rem; /* Aumenta el espacio interior (vertical y horizontal) */
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#social{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--social-bg-color);
+  padding: .5rem;
+  animation: slide-top 1s ease-in-out;
+}
+.socialDiv{
+  width: 5rem;
+  
+}
+.icono{
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.icono:hover{
+  background-color: var(--social-bg-color-hover);
 }
