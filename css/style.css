@@ -8,9 +8,10 @@ html {
     --gradient-right: #011082;
     --header-hover: #ffb163;
     --header-text: rgba(232, 232, 232, 0.85);
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --border-radius: 8px;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --main-bg:#31373c;
+    --p-about:#c8c6c6ea;
+    --skills:#252525;
 }
 /*animaciones*/
 @keyframes slide-right {
@@ -104,6 +105,7 @@ header{
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
+  background-color: var(--main-bg);
 }
 .intro{
   position: absolute;
@@ -181,4 +183,87 @@ h1::after {
 }
 .icono:hover{
   background-color: var(--social-bg-color-hover);
+}
+
+@media (max-width: 800px) {
+  #social{
+    display: none;
+  }
+  .pText {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+/*about*/
+#about{
+  padding: 5rem 0 12rem 0;
+  /*scroll-margin-top: 100px; para hacer click en nav ajustá según el alto de tu navbar */
+}
+.my-size-about{
+  max-width: 120rem;
+  width: 90%;
+}
+.h2-about{
+  margin-bottom: 9rem;
+  font-size: 40px;
+  position: relative;
+}
+.h2-about::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  height: 5px;
+  width: 10%;
+  background: var(--gradient-left);
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  border-radius: 5px;
+  
+}
+.h2-about.active::after{
+  animation: scaleLine 1s ease-out forwards;
+}
+.p-about{
+  margin: 3rem auto 0 auto;
+  max-width: 90rem;
+}
+.h3-about{
+  margin-bottom: 2rem;
+  font-size: 30px;
+}
+.about-content{
+  margin-top: 45px;
+}
+.p-14{
+  font-size: 14px;
+  color: var(--p-about);
+}
+
+.div-skills{
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 16px;
+  color:var(--skills);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (max-width: 768px){
+  .skills{
+    margin-top: 25px;
+  }
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.5s ease-out;
+}
+
+/* Clase que se activa al hacer scroll */
+.slide-right.active {
+  animation: slide-right 1.5s ease-out forwards;
 }
