@@ -173,7 +173,6 @@ h1::after {
 }
 .socialDiv{
   width: 5rem;
-  
 }
 .icono{
   width: 100%;
@@ -202,7 +201,7 @@ h1::after {
   /*scroll-margin-top: 100px; para hacer click en nav ajustá según el alto de tu navbar */
 }
 .my-size-about{
-  max-width: 120rem;
+  max-width: 130rem;
   width: 90%;
 }
 .h2-about{
@@ -267,3 +266,46 @@ h1::after {
 .slide-right.active {
   animation: slide-right 1.5s ease-out forwards;
 }
+
+/*project*/
+.card {
+  width: 100%;              /* Ocupa todo el ancho disponible */
+  max-width: 400px;         /* No pasa de 400px */
+  margin: auto;             /* Centrada horizontalmente si está en columna */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.625), 0 6px 20px 0 rgba(0, 0, 0, 0.387);
+}
+.card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 72, 255, 0.625), 0 6px 20px 0 rgba(0, 72, 255, 0.625);    
+}
+.img-project {
+  width: 100%;              /* Que ocupe todo el ancho de la card */
+  height: 200px;            /* Alto fijo */
+  object-fit: cover;        /* Recorta la imagen si es necesario */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.ProjectDiv{
+  text-align: center;
+}
+.iconoP {
+  font-size: 32px;
+  color: #0b0b22; /* oscuro */
+  padding-right: 15px;
+}
+
+.iconoP:hover {
+  transform: scale(1.1);
+  color: #333;
+}
+h4{
+  font-size: 22px;
+}
+.text-card{
+  font-size: 12px;
+}
+.padding-card{
+  padding-top: 10px;
+}
+
