@@ -309,3 +309,64 @@ h4{
   padding-top: 10px;
 }
 
+/*form*/
+.form-container{
+  padding: 4rem;
+  margin: 5rem auto 0 auto;
+  width: 95%;
+  max-width: 90rem;
+  border-radius: 5px;
+  background-color: var(--social-bg-color);
+  box-shadow: rgb(100, 100, 111,0.2) 0px 7px 29px 0px;
+  text-align: left;
+  font-size: 14px;
+  font-family: var(--font-family);
+}
+.element{
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--skills);
+}
+.btnform button {
+  font-size: 1.5rem; /* Aumenta el tamaño del texto */
+  padding: 1.2rem 5rem; /* Aumenta el espacio interior (vertical y horizontal) */
+  display: inline-block;
+  border-radius: 5px;
+}
+.end{
+  padding-bottom: 40px;
+}
+.iconoContact {
+  width: 100%;
+  display: flex; /* ✅ Esto alinea los hijos en línea */
+  align-items: center; /* ✅ Centra verticalmente la imagen y el texto */
+  gap: 0.5rem; /* Espacio entre el ícono y el texto */
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.iconoContact img {
+  width: 50px; /* Ajustá el tamaño del ícono si hace falta */
+  height: auto;
+  background-color: white;
+  padding: 5px;
+}
+.redes{
+  padding-top: 4rem;
+}
+
+/*footer*/
+footer{
+  background-color: black;
+}
+.footer-content{
+  padding: 4rem 0;
+  color: var(--p-about);
+  font-size: 1.2rem;
+  text-align: center;
+}
+.afooter{
+  text-decoration: underline;
+  font-weight: bold;
+}
